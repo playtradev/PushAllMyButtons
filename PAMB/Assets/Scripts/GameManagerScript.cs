@@ -7,8 +7,14 @@ public class GameManagerScript : MonoBehaviour
 {
 
 	public static GameManagerScript Instance;
+
+	public GameStateType GameState;
+
 	public TextMeshProUGUI Points;
-	public float Speed = 0;
+	public int PointsToFinishLevel = 20;
+	public int Speed = 0;
+	public bool Exploded = false;
+	private Vector3 CameraBasePos;
 
 	private void Awake()
 	{
@@ -18,7 +24,7 @@ public class GameManagerScript : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
     {
-        
+		CameraBasePos = Camera.main.transform.position;
     }
 
     // Update is called once per frame
@@ -29,9 +35,7 @@ public class GameManagerScript : MonoBehaviour
 			Speed++;
 		}
 
-
-
-		if(Input.GetMouseButtonDown(0))
+		if(Input.GetMouseButtonDown(0) && GameState == GameStateType.Start)
 		{
 			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             Plane p = new Plane(Vector3.up, Vector3.zero);
@@ -56,11 +60,35 @@ public class GameManagerScript : MonoBehaviour
 				}
 				Points.text = "Points:" + Speed;
 			}
-
-
 		}
 
-
+		if(Speed == PointsToFinishLevel && !Exploded)
+		{
+			Exploded = true;
+			Speed = 0;
+			GameState = GameStateType.Intro;
+			Rotator.Instance.Explosion();
+			Invoke("GoToNextLevel", 3);
+		}
 
     }
+
+
+    public void GoToNextLevel()
+	{
+		Camera.main.transform.position = CameraBasePos;
+		Exploded = false;
+		Speed = 1;
+		Camera.main.orthographic = true;
+		Rotator.Instance.GoToNextLevel();
+	}
+}
+
+
+
+public enum GameStateType
+{
+	Intro,
+    Start,
+    End
 }
