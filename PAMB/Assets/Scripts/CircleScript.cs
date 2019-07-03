@@ -7,6 +7,12 @@ public class CircleScript : MonoBehaviour
 
 	public float Timer = 0;
 	public Vector3 PosOffset;
+	public Rigidbody RB;
+
+	private void Awake()
+	{
+		RB = GetComponent<Rigidbody>();
+	}
 
 	private void OnEnable()
 	{
@@ -17,15 +23,11 @@ public class CircleScript : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-		if(Timer <= 1)
+		/*if(Timer <= 1)
 		{
 			Timer += Time.fixedDeltaTime;
 			transform.position = Vector3.Lerp(PosOffset, Rotator.Instance.transform.position, Timer);
             
-		}
-		else if(GameManagerScript.Instance.GameState == GameStateType.Intro)
-		{
-			GameManagerScript.Instance.GameState = GameStateType.Start;
-		}
+		}*/
     }
 }

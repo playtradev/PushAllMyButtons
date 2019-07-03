@@ -33,7 +33,7 @@ public class Rotator : MonoBehaviour
 
     public void Explosion()
 	{
-		Vector3 baseExplosion = transform.position + Vector3.down + new Vector3(1.5f,0,1.5f);//Random.Range(-2.5f, 2.5f), 0, Random.Range(-2.5f, 2.5f)
+		Vector3 baseExplosion = Vector3.down + new Vector3(1f, 0, 1f);//  + new Vector3(1f,0,1f)      Random.Range(-2.5f, 2.5f), 0, Random.Range(-2.5f, 2.5f)
 		Debug.DrawRay(baseExplosion, Vector3.up * 10, Color.red, 10);
 
 		RaycastHit[] hits = Physics.RaycastAll(new Ray(baseExplosion, Vector3.up * 10), 10);
@@ -42,8 +42,6 @@ public class Rotator : MonoBehaviour
 		{
 			if(item.collider.tag != "Button")
 			{
-				Camera.main.transform.position = new Vector3(0, 30, -5.5f);
-				Camera.main.orthographic = false;
 				item.collider.gameObject.AddComponent<BoxCollider>();
 				item.collider.gameObject.GetComponent<MeshCollider>().enabled = false;
 				item.collider.gameObject.GetComponent<Rigidbody>().isKinematic = false;
@@ -57,10 +55,15 @@ public class Rotator : MonoBehaviour
 
     public void GoToNextLevel()
 	{
-		CurrentLevel++;
+		CurrentLevel = GameManagerScript.Instance.CurrentLevel.y;
 		CurrentCircle.gameObject.SetActive(false);
 		if(CurrentLevel < Levels.Count)
 		{
+			CurrentCircle.RB.velocity = Vector3.zero;
+			CurrentCircle.RB.angularVelocity = Vector3.zero;
+			CurrentCircle.RB.useGravity = false;
+			CurrentCircle.transform.localPosition = Vector3.zero;
+			CurrentCircle.transform.localEulerAngles = Vector3.zero;
 			CurrentCircle = Levels[CurrentLevel];
             CurrentCircle.gameObject.SetActive(true);
 		}

@@ -7,6 +7,8 @@ public class UIManagerScript : MonoBehaviour
 {
 	public static UIManagerScript Instance;
 	public Animator WinPanel;
+	public Animator StartPanel;
+	private bool StartPanelBool = true;
 
 	private void Awake()
 	{
@@ -28,5 +30,13 @@ public class UIManagerScript : MonoBehaviour
 	public void SetWinPanelAnim(bool v)
 	{
 		WinPanel.SetBool("InOut", v);
+	}
+
+    public void StartLevel()
+	{
+		GameManagerScript.Instance.GameState = GameStateType.Start;
+		StartPanelBool = !StartPanelBool;
+		StartPanel.SetBool("Visible", StartPanelBool);
+		CameraProjectionChange.Instance.SetChangeProjection(OrtoPersType.Orto);
 	}
 }

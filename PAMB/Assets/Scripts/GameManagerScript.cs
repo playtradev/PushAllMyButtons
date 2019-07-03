@@ -9,22 +9,26 @@ public class GameManagerScript : MonoBehaviour
 	public static GameManagerScript Instance;
 
 	public GameStateType GameState;
-
+	public Vector2Int CurrentLevel;
 	public TextMeshProUGUI Points;
 	public int PointsToFinishLevel = 20;
 	public int Speed = 0;
 	public bool Exploded = false;
-	private Vector3 CameraBasePos;
+	public Animator MainCamAnim;
+	public float VulcanoSideMovement = 40;
 
 	private void Awake()
 	{
 		Instance = this;
+		CurrentLevel = Vector2Int.zero;
+
 	}
 
 	// Start is called before the first frame update
 	void Start()
     {
-		CameraBasePos = Camera.main.transform.position;
+		CameraProjectionChange.Instance.SetChangeProjection(OrtoPersType.Orto);
+		GameState = GameStateType.Start;
     }
 
     // Update is called once per frame
@@ -64,24 +68,57 @@ public class GameManagerScript : MonoBehaviour
 
 		if(Speed == PointsToFinishLevel && !Exploded)
 		{
+			CurrentLevel.y += 1;
 			Exploded = true;
 			Speed = 0;
-			GameState = GameStateType.Intro;
-			Rotator.Instance.Explosion();
-			Invoke("GoToNextLevel", 3);
+			GameState = GameStateType.Move;
+			CameraProjectionChange.Instance.SetChangeProjection(OrtoPersType.Persp);
+			Rotator.Instance.Invoke("Explosion", 2);
+			Invoke("LevelComplete", 5);
 		}
 
     }
 
 
+	public void LevelComplete()
+    {
+        CameraProjectionChange.Instance.MoveToNext(VulcanoSideMovement);
+        Exploded = false;
+        Speed = 1;
+    }
+
     public void GoToNextLevel()
 	{
-		Camera.main.transform.position = CameraBasePos;
-		Exploded = false;
-		Speed = 1;
-		Camera.main.orthographic = true;
-		Rotator.Instance.GoToNextLevel();
+		if(GameState != GameStateType.Move )
+		{
+			CurrentLevel.y += 1;
+			GameState = GameStateType.Move;
+            CameraProjectionChange.Instance.SetChangeProjection(OrtoPersType.Persp);
+            CameraProjectionChange.Instance.MoveToNext(VulcanoSideMovement);
+            Exploded = false;
+            Speed = 1;
+		}
+
 	}
+
+	public void GoToPrevLevel()
+    {
+		if (GameState != GameStateType.Move && CurrentLevel.y - 1 >= 0)
+		{
+			CurrentLevel.y -= 1;
+			GameState = GameStateType.Move;
+			CameraProjectionChange.Instance.SetChangeProjection(OrtoPersType.Persp);
+			CameraProjectionChange.Instance.MoveToNext(-VulcanoSideMovement);
+			Exploded = false;
+			Speed = 1;
+		}
+    }
+
+    public void SetCameraAnim(bool v)
+	{
+		MainCamAnim.SetBool("UpDown", v);
+	}
+
 }
 
 
@@ -90,5 +127,12 @@ public enum GameStateType
 {
 	Intro,
     Start,
-    End
+    End,
+    Move
+}
+
+public enum OrtoPersType
+{
+	Orto,
+    Persp
 }
