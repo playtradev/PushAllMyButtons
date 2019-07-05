@@ -17,20 +17,71 @@ public class GameManagerScript : MonoBehaviour
 	public bool Exploded = false;
 	public Animator MainCamAnim;
 	public float VulcanoSideMovement = 40;
+	public List<string> levels = new List<string>();
+
+	string saving = "";
 
 	private void Awake()
 	{
 		Instance = this;
 		CurrentLevel = Vector2Int.zero;
-
 	}
 
 	// Start is called before the first frame update
 	void Start()
     {
-		CameraProjectionChange.Instance.SetChangeProjection(OrtoPersType.Orto);
-		GameState = GameStateType.Start;
+		//PlayerPrefs.SetString("LevelsProgression", "");
+		saving = PlayerPrefs.GetString("LevelsProgression");
+		if (string.IsNullOrEmpty(saving))
+        {
+            for (int i = 0; i < Rotator.Instance.Levels.Count; i++)
+            {
+				levels.Add("0");
+                saving += "0,";
+            }
+			PlayerPrefs.SetString("LevelsProgression", saving);
+            CurrentLevel.y = 0;
+        }
+        else
+        {
+            levels = saving.Split(',').ToList();
+			levels.RemoveAt(levels.Count - 1);
+            if (levels.Count != Rotator.Instance.Levels.Count)
+            {
+                for (int i = 0; i < Rotator.Instance.Levels.Count - levels.Count; i++)
+                {
+                    levels.Add("0");
+                    saving += "0,";
+                }
+            }
+
+            CurrentLevel.y = levels.LastIndexOf("1") + 1;
+			if(CurrentLevel.y == -1)
+			{
+				CurrentLevel.y = 0;
+			}
+			if(CurrentLevel.y == Rotator.Instance.Levels.Count)
+			{
+				CurrentLevel.y--;
+			}
+        }
+		CameraProjectionChange.Instance.transform.parent.position += new Vector3(CurrentLevel.y * 40, 0, 0);
+		ButtonsRotator.Instance.StartLevel();
+		Rotator.Instance.StartLevel();
+		Invoke("StartMatch", 1);
     }
+
+
+    private void StartMatch()
+	{
+		CameraProjectionChange.Instance.SetCameraAnim(false);
+	}
+
+
+    public void SetGameStateToStart()
+	{
+		GameState = GameStateType.Start;
+	}
 
     // Update is called once per frame
     void Update()
@@ -76,8 +127,16 @@ public class GameManagerScript : MonoBehaviour
 			Speed = 0;
 			GameState = GameStateType.Move;
 			CameraProjectionChange.Instance.SetChangeProjection(OrtoPersType.Persp);
-			Rotator.Instance.Invoke("Explosion", 2);
-			Invoke("LevelComplete", 5);
+			Rotator.Instance.Invoke("Explosion", 1);
+			if(CurrentLevel.y < Rotator.Instance.Levels.Count)
+			{
+				Invoke("LevelComplete", 4);
+			}
+			else
+			{
+				GameManagerScript.Instance.GameState = GameStateType.End;
+                UIManagerScript.Instance.SetWinPanelAnim(true);
+			}
 		}
 
     }
@@ -85,6 +144,7 @@ public class GameManagerScript : MonoBehaviour
 
 	public void LevelComplete()
     {
+		CameraProjectionChange.Instance.Anim.enabled = false;
         CameraProjectionChange.Instance.MoveToNext(VulcanoSideMovement);
         Exploded = false;
         Speed = 1;
@@ -92,16 +152,29 @@ public class GameManagerScript : MonoBehaviour
 
     public void GoToNextLevel()
 	{
-		if(GameState != GameStateType.Move )
+		if(GameState != GameStateType.Move && CurrentLevel.y < Rotator.Instance.Levels.Count)
 		{
 			CurrentLevel.y += 1;
-			GameState = GameStateType.Move;
-            CameraProjectionChange.Instance.SetChangeProjection(OrtoPersType.Persp);
-            CameraProjectionChange.Instance.MoveToNext(VulcanoSideMovement);
-            Exploded = false;
-            Speed = 1;
+			if (CurrentLevel.y < Rotator.Instance.Levels.Count)
+			{
+				GameState = GameStateType.Move;
+				CameraProjectionChange.Instance.SetCameraAnim(true);
+				CameraProjectionChange.Instance.SetChangeProjection(OrtoPersType.Persp);
+				Invoke("MoveN", 1);
+				Exploded = false;
+				Speed = 1;
+			}
+			else
+			{
+				CurrentLevel.y--;
+			}
 		}
 
+	}
+
+    private void MoveN()
+	{
+		CameraProjectionChange.Instance.MoveToNext(VulcanoSideMovement);
 	}
 
 	public void GoToPrevLevel()
@@ -110,11 +183,17 @@ public class GameManagerScript : MonoBehaviour
 		{
 			CurrentLevel.y -= 1;
 			GameState = GameStateType.Move;
-			CameraProjectionChange.Instance.SetChangeProjection(OrtoPersType.Persp);
-			CameraProjectionChange.Instance.MoveToNext(-VulcanoSideMovement);
-			Exploded = false;
-			Speed = 1;
+            CameraProjectionChange.Instance.SetCameraAnim(true);
+            CameraProjectionChange.Instance.SetChangeProjection(OrtoPersType.Persp);
+            Invoke("MoveP", 1);
+            Exploded = false;
+            Speed = 1;
 		}
+    }
+
+	private void MoveP()
+    {
+        CameraProjectionChange.Instance.MoveToNext(-VulcanoSideMovement);
     }
 
     public void SetCameraAnim(bool v)
@@ -122,6 +201,16 @@ public class GameManagerScript : MonoBehaviour
 		MainCamAnim.SetBool("UpDown", v);
 	}
 
+    public void LevelCompleted(int index)
+	{
+		saving = "";
+		levels[index] = "1";
+		for (int i = 0; i < levels.Count; i++)
+		{
+			saving += levels[i] + ",";
+		}
+		PlayerPrefs.SetString("LevelsProgression", saving);
+	}
 }
 
 

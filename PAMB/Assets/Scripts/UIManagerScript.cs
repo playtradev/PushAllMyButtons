@@ -2,12 +2,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIManagerScript : MonoBehaviour
 {
 	public static UIManagerScript Instance;
 	public Animator WinPanel;
 	public Animator StartPanel;
+	public Image LevelComplete;
 	private bool StartPanelBool = true;
 
 	private void Awake()

@@ -47,6 +47,11 @@ public class ButtonsRotator : MonoBehaviour
 		}
     }
 
+	public void StartLevel()
+	{
+		transform.position += new Vector3(GameManagerScript.Instance.CurrentLevel.y * 40, 0, 0);
+	}
+
     public void ResetAnimator()
 	{
 		IsAnimActive = false;

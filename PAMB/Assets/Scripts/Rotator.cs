@@ -14,19 +14,17 @@ public class Rotator : MonoBehaviour
 	[Range(3,1000)]
 	public float ExplosionForce;
 
+
+	private void Awake()
+	{
+		Instance = this;
+	}
+
 	// Start is called before the first frame update
 	void Start()
     {
-		Instance = this;
-		Levels = Levels.OrderBy(r => r.Position).ToList();
-		CurrentCircle = Levels[CurrentLevel];
-		CurrentCircle.gameObject.SetActive(true);
-		foreach (Transform item in CurrentCircle.Buttons)
-        {
-            item.gameObject.SetActive(true);
-        }
+		
 
-        GameManagerScript.Instance.Difficulty = CurrentCircle.Difficulty;
     }
 
     // Update is called once per frame
@@ -38,11 +36,27 @@ public class Rotator : MonoBehaviour
 		}
     }
 
+    public void StartLevel()
+	{
+		Levels = Levels.OrderBy(r => r.Position).ToList();
+		CurrentLevel = GameManagerScript.Instance.CurrentLevel.y;
+		transform.position += new Vector3(CurrentLevel * 40, 0, 0);
+		CurrentCircle = Levels[CurrentLevel];
+        CurrentCircle.gameObject.SetActive(true);
+        foreach (Transform item in CurrentCircle.Buttons)
+        {
+            item.gameObject.SetActive(true);
+        }
+		UIManagerScript.Instance.LevelComplete.enabled = GameManagerScript.Instance.levels[CurrentLevel] == "0" ? false : true;
+        GameManagerScript.Instance.Difficulty = CurrentCircle.Difficulty;
+	}
+
+
     public void Explosion()
 	{
 		Vector3 baseExplosion = Vector3.down + new Vector3(1f, 0, 1f);//  + new Vector3(1f,0,1f)      Random.Range(-2.5f, 2.5f), 0, Random.Range(-2.5f, 2.5f)
 		Debug.DrawRay(baseExplosion, Vector3.up * 10, Color.red, 10);
-
+		GameManagerScript.Instance.LevelCompleted(CurrentLevel);
 		RaycastHit[] hits = Physics.RaycastAll(new Ray(baseExplosion, Vector3.up * 10), 10);
 
 		foreach (RaycastHit item in hits)
@@ -68,7 +82,7 @@ public class Rotator : MonoBehaviour
 		{
 
 			ButtonsRotator.Instance.ResetAnimator();
-
+			UIManagerScript.Instance.LevelComplete.enabled = GameManagerScript.Instance.levels[CurrentLevel] == "0" ? false : true;
 			CurrentCircle.RB.velocity = Vector3.zero;
 			CurrentCircle.RB.angularVelocity = Vector3.zero;
 			CurrentCircle.RB.useGravity = false;
@@ -95,8 +109,7 @@ public class Rotator : MonoBehaviour
 		}
 		else
 		{
-			GameManagerScript.Instance.GameState = GameStateType.End;
-			UIManagerScript.Instance.SetWinPanelAnim(true);
+			
 		}
 	}
 

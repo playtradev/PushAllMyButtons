@@ -1,0 +1,1094 @@
+fileFormatVersion: 2
+guid: f82e75c33a145fd44a809f523a766e14
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6895560545484803397
+    second: lava-particle-1k_0
+  - first:
+      213: 3078810670466907668
+    second: lava-particle-1k_1
+  - first:
+      213: -5857831339458221141
+    second: lava-particle-1k_2
+  - first:
+      213: -2230856178857299638
+    second: lava-particle-1k_3
+  - first:
+      213: -436590041767722463
+    second: lava-particle-1k_4
+  - first:
+      213: -186164359385680172
+    second: lava-particle-1k_5
+  - first:
+      213: -424053392338466291
+    second: lava-particle-1k_6
+  - first:
+      213: 280891425566757817
+    second: lava-particle-1k_7
+  - first:
+      213: 7480219896324063338
+    second: lava-particle-1k_8
+  - first:
+      213: -770602656339681114
+    second: lava-particle-1k_9
+  - first:
+      213: 9071200533411458918
+    second: lava-particle-1k_10
+  - first:
+      213: -2224210947886282080
+    second: lava-particle-1k_11
+  - first:
+      213: 1734967206991413176
+    second: lava-particle-1k_12
+  - first:
+      213: 495868782083634599
+    second: lava-particle-1k_13
+  - first:
+      213: 5905902441689679008
+    second: lava-particle-1k_14
+  - first:
+      213: 159833962427887721
+    second: lava-particle-1k_15
+  - first:
+      213: 2596588088290254669
+    second: lava-particle-1k_16
+  - first:
+      213: -1040079698148891753
+    second: lava-particle-1k_17
+  - first:
+      213: -1970220475835648915
+    second: lava-particle-1k_18
+  - first:
+      213: 4851207539854686538
+    second: lava-particle-1k_19
+  - first:
+      213: -5347587884582474762
+    second: lava-particle-1k_20
+  - first:
+      213: 692359989596836309
+    second: lava-particle-1k_21
+  - first:
+      213: -6817731898530153552
+    second: lava-particle-1k_22
+  - first:
+      213: 7781820869224785263
+    second: lava-particle-1k_23
+  - first:
+      213: -661629299768823618
+    second: lava-particle-1k_24
+  - first:
+      213: -6192984228197632641
+    second: lava-particle-1k_25
+  - first:
+      213: 5168625599979437351
+    second: lava-particle-1k_26
+  - first:
+      213: -1003924926066898218
+    second: lava-particle-1k_27
+  - first:
+      213: 2866116047917377258
+    second: lava-particle-1k_28
+  - first:
+      213: -3345865129378308665
+    second: lava-particle-1k_29
+  - first:
+      213: -6072133505736489250
+    second: lava-particle-1k_30
+  - first:
+      213: -3317424637978068293
+    second: lava-particle-1k_31
+  - first:
+      213: -4296908159160292372
+    second: lava-particle-1k_32
+  - first:
+      213: -3930946220820833162
+    second: lava-particle-1k_33
+  - first:
+      213: 7724019499725083044
+    second: lava-particle-1k_34
+  - first:
+      213: 3432213640875490479
+    second: lava-particle-1k_35
+  - first:
+      213: 6040153252222733238
+    second: lava-particle-1k_36
+  - first:
+      213: -9037465654127656756
+    second: lava-particle-1k_37
+  - first:
+      213: -4732118207263951248
+    second: lava-particle-1k_38
+  - first:
+      213: -4358414391294044425
+    second: lava-particle-1k_39
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: lava-particle-1k_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 557
+        width: 128
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7a5ab82cbe83e44797411a199e7e4cc
+      internalID: -6895560545484803397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lava-particle-1k_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 557
+        width: 128
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6874d254e93290b4eb7db89c559aaf82
+      internalID: 3078810670466907668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lava-particle-1k_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 557
+        width: 128
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e38f63a43175d949b04425ca0e7e513
+      internalID: -5857831339458221141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lava-particle-1k_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 557
+        width: 128
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2d591e5e88cb494fb36be7de8618100
+      internalID: -2230856178857299638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lava-particle-1k_4
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 557
+        width: 128
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54b0453e61df1fc438bd9a73f93314b0
+      internalID: -436590041767722463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lava-particle-1k_5
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 557
+        width: 128
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb07ebc7066603a4da90df5675063469
+      internalID: -186164359385680172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lava-particle-1k_6
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 557
+        width: 128
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f48f66d7a21cbdf45bf789f2a5cccea9
+      internalID: -424053392338466291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lava-particle-1k_7
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 557
+        width: 128
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d828e422d6002e6408b8932afed2cab9
+      internalID: 280891425566757817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lava-particle-1k_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 437
+        width: 128
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cbe3f07e22c5604a87fcf20bc583df6
+      internalID: 7480219896324063338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lava-particle-1k_9
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 437
+        width: 128
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0afd7d39fb727d46b9080591e08500d
+      internalID: -770602656339681114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lava-particle-1k_10
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 437
+        width: 128
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 498f742ba0f54bc4a8446bb911ba49a1
+      internalID: 9071200533411458918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lava-particle-1k_11
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 437
+        width: 128
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f392fab117cb8a442a55b7d6e5e37ff2
+      internalID: -2224210947886282080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lava-particle-1k_12
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 437
+        width: 128
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbae55ff7fcee1b4da866499fb30fca4
+      internalID: 1734967206991413176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lava-particle-1k_13
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 437
+        width: 128
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0b8f529148870448ab91b70edb2f646
+      internalID: 495868782083634599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lava-particle-1k_14
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 437
+        width: 128
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d558e9d272e944c4b8f6643c962eebc1
+      internalID: 5905902441689679008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lava-particle-1k_15
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 437
+        width: 128
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14dc050cace7c424987e7f58c95dac2f
+      internalID: 159833962427887721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lava-particle-1k_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 317
+        width: 128
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b343a92a9f70d3418c576a2aee1afe0
+      internalID: 2596588088290254669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lava-particle-1k_17
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 317
+        width: 128
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f44540aee54081343bea221f4332b900
+      internalID: -1040079698148891753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lava-particle-1k_18
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 317
+        width: 128
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5359ee24d9ef46449e08bb31fd251a2
+      internalID: -1970220475835648915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lava-particle-1k_19
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 317
+        width: 128
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5247b2cf89ecac746b7ac5255468118e
+      internalID: 4851207539854686538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lava-particle-1k_20
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 317
+        width: 128
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3591bf4cdea633c4780ec7e492c2c55a
+      internalID: -5347587884582474762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lava-particle-1k_21
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 317
+        width: 128
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89cc449176b13cf4e8f34b3e1c4a7f10
+      internalID: 692359989596836309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lava-particle-1k_22
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 317
+        width: 128
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 646be379534692e4cbe7bdf2e193cfcd
+      internalID: -6817731898530153552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lava-particle-1k_23
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 317
+        width: 128
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c9e76eb118e2dc4dab5706c7a10cae6
+      internalID: 7781820869224785263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lava-particle-1k_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 197
+        width: 128
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6646722e1b0c9a249a7a2eae8ccd9c33
+      internalID: -661629299768823618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lava-particle-1k_25
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 197
+        width: 128
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fbcf61663b07b3499266d13126ddc80
+      internalID: -6192984228197632641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lava-particle-1k_26
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 197
+        width: 128
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 137b3ba6b6cc91e49a6e83b18f05b952
+      internalID: 5168625599979437351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lava-particle-1k_27
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 197
+        width: 128
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48395df13d883494095ad371144f9f0f
+      internalID: -1003924926066898218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lava-particle-1k_28
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 197
+        width: 128
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3558f585b43e52a40bfe6f23ddd21052
+      internalID: 2866116047917377258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lava-particle-1k_29
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 197
+        width: 128
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3148f2670fba124ba2c93bf08864f03
+      internalID: -3345865129378308665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lava-particle-1k_30
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 197
+        width: 128
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8604e5322ba22b547a41769a3790e1e7
+      internalID: -6072133505736489250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lava-particle-1k_31
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 197
+        width: 128
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16b2c5df0f5fa6f4aa1e05bd3cffeed8
+      internalID: -3317424637978068293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lava-particle-1k_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 77
+        width: 128
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ac5bb4d91acb9341b4f545d5e23bb9d
+      internalID: -4296908159160292372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lava-particle-1k_33
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 77
+        width: 128
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d0dc1d83d4724d4ea402ef081912911
+      internalID: -3930946220820833162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lava-particle-1k_34
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 77
+        width: 128
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec48e529625faa74dbb0b5b83d2a8f5f
+      internalID: 7724019499725083044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lava-particle-1k_35
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 77
+        width: 128
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9b2ad3080e6ea348afc96decfdc9f46
+      internalID: 3432213640875490479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lava-particle-1k_36
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 77
+        width: 128
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d523d904091a424988a61d9857c72d8
+      internalID: 6040153252222733238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lava-particle-1k_37
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 77
+        width: 128
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2269d246768271840939a8cc3d031b14
+      internalID: -9037465654127656756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lava-particle-1k_38
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 77
+        width: 128
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d3b845d67838fa41bd69bd4a35a7312
+      internalID: -4732118207263951248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lava-particle-1k_39
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 77
+        width: 128
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 168614240f055eb4f9d66239a0e72510
+      internalID: -4358414391294044425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 6802387e162b08c4696919507d3ef5cd
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

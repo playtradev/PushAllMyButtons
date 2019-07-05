@@ -13,7 +13,7 @@ public class CameraProjectionChange : MonoBehaviour
     
 	private IEnumerator MoveCamCo;
 
-
+	public Animator Anim;
 	public Camera MainCamera;
 
     private bool _changing = false;
@@ -72,6 +72,10 @@ public class CameraProjectionChange : MonoBehaviour
         }
         else
         {
+			if(currentlyOrthographic)
+			{
+				SetCameraAnim(currentlyOrthographic);
+			}
             _changing = false;
             MainCamera.orthographic = !currentlyOrthographic;
             MainCamera.ResetProjectionMatrix();
@@ -92,20 +96,27 @@ public class CameraProjectionChange : MonoBehaviour
 
 	public void MoveToNext(float x)
 	{
-		if(MoveCamCo != null)
+		if(GameManagerScript.Instance.CurrentLevel.y < Rotator.Instance.Levels.Count)
 		{
-			StopCoroutine(MoveCamCo);
-		}
+			if (MoveCamCo != null)
+            {
+                StopCoroutine(MoveCamCo);
+            }
 
-		MoveCamCo = MoveCamera(transform.position + (Vector3.right * x), x);
-		StartCoroutine(MoveCamCo);
+            MoveCamCo = MoveCamera(transform.parent.transform.position + (Vector3.right * x), x);
+            StartCoroutine(MoveCamCo);
+		}
+		else
+		{
+			
+		}
 	}
 
 
 	private IEnumerator MoveCamera(Vector3 dest, float x)
 	{
 		float Timer = 0;
-		Vector3 OffsetPos = transform.position;
+		Vector3 OffsetPos = transform.parent.transform.position;
 		bool MoveEnvironment = false;
 		while(Timer < 1)
 		{
@@ -115,14 +126,23 @@ public class CameraProjectionChange : MonoBehaviour
 				Rotator.Instance.GoToNextLevel();
 				EnvironmentManagerScript.Instance.MoveToNext(x);
 			}
-			transform.position = Vector3.Lerp(OffsetPos, dest, Timer);
+			transform.parent.transform.position = Vector3.Lerp(OffsetPos, dest, Timer);
 			yield return new WaitForFixedUpdate();
 			Timer += Time.fixedDeltaTime;
 		}
-		GameManagerScript.Instance.GameState = GameStateType.Intro;
-		SetChangeProjection(OrtoPersType.Orto);
-		GameManagerScript.Instance.GameState = GameStateType.Start;
+		Anim.enabled = true;
+		SetCameraAnim(false);
 		MoveCamCo = null;                                       
 	}
 
+	public void SetGameStateToStart()
+	{
+		GameManagerScript.Instance.SetGameStateToStart();
+	}
+
+
+	public void SetCameraAnim(bool v)
+	{
+		Anim.SetBool("UpDown", v);
+	}
 }
