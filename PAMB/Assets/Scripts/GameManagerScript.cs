@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System.Linq;
 
 public class GameManagerScript : MonoBehaviour
 {
 
 	public static GameManagerScript Instance;
-
+	public DifficultyType Difficulty;
 	public GameStateType GameState;
 	public Vector2Int CurrentLevel;
 	public TextMeshProUGUI Points;
@@ -46,11 +47,13 @@ public class GameManagerScript : MonoBehaviour
             float dist = 0;
             p.Raycast(ray, out dist);
             Debug.DrawRay(ray.origin, ray.direction * 100, Color.red, 30);
-            RaycastHit hit;
-            bool found = Physics.Raycast(ray, out hit, 100);
-			if(found)
+            RaycastHit[] hit;
+			hit = Physics.RaycastAll(ray,100);
+			if(hit.Length > 0)
 			{
-				if (hit.collider.tag == "Button")
+				int button = hit.Where(r => r.collider.tag == "Button").ToList().Count();
+				int disk = hit.Where(r => r.collider.tag == "Disk").ToList().Count();
+				if (button > 0 && disk == 0)
                 {
                     Speed++;
                 }
@@ -135,4 +138,12 @@ public enum OrtoPersType
 {
 	Orto,
     Persp
+}
+
+
+public enum DifficultyType
+{
+	easy,
+    med,
+    hard
 }

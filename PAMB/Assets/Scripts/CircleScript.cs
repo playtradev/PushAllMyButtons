@@ -4,14 +4,20 @@ using UnityEngine;
 
 public class CircleScript : MonoBehaviour
 {
-
+	public int Position;
 	public float Timer = 0;
 	public Vector3 PosOffset;
 	public Rigidbody RB;
+	public DifficultyType Difficulty;
+	public RuntimeAnimatorController OwnAnimator;
+
+	public List<Transform> Buttons = new List<Transform>();
 
 	private void Awake()
 	{
 		RB = GetComponent<Rigidbody>();
+		Position = transform.GetSiblingIndex();
+		gameObject.SetActive(false);
 	}
 
 	private void OnEnable()

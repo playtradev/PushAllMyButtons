@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Rotator : MonoBehaviour
@@ -8,7 +9,6 @@ public class Rotator : MonoBehaviour
 	public static Rotator Instance;
 
 	public List<CircleScript> Levels = new List<CircleScript>();
-
 	public int CurrentLevel = 0;
 	public CircleScript CurrentCircle;
 	[Range(3,1000)]
@@ -18,8 +18,15 @@ public class Rotator : MonoBehaviour
 	void Start()
     {
 		Instance = this;
+		Levels = Levels.OrderBy(r => r.Position).ToList();
 		CurrentCircle = Levels[CurrentLevel];
 		CurrentCircle.gameObject.SetActive(true);
+		foreach (Transform item in CurrentCircle.Buttons)
+        {
+            item.gameObject.SetActive(true);
+        }
+
+        GameManagerScript.Instance.Difficulty = CurrentCircle.Difficulty;
     }
 
     // Update is called once per frame
@@ -59,12 +66,31 @@ public class Rotator : MonoBehaviour
 		CurrentCircle.gameObject.SetActive(false);
 		if(CurrentLevel < Levels.Count)
 		{
+
+			ButtonsRotator.Instance.ResetAnimator();
+
 			CurrentCircle.RB.velocity = Vector3.zero;
 			CurrentCircle.RB.angularVelocity = Vector3.zero;
 			CurrentCircle.RB.useGravity = false;
 			CurrentCircle.transform.localPosition = Vector3.zero;
 			CurrentCircle.transform.localEulerAngles = Vector3.zero;
+			foreach (Transform item in CurrentCircle.Buttons)
+            {
+				item.gameObject.SetActive(false);
+            }
 			CurrentCircle = Levels[CurrentLevel];
+
+			foreach (Transform item in transform.Cast<Transform>().Where(r=> r != transform).ToList())
+			{
+				item.gameObject.SetActive(false);
+			}
+
+			foreach (Transform item in CurrentCircle.Buttons)
+            {
+				item.gameObject.SetActive(true);
+            }
+       
+			GameManagerScript.Instance.Difficulty = CurrentCircle.Difficulty;
             CurrentCircle.gameObject.SetActive(true);
 		}
 		else
