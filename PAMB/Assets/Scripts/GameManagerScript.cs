@@ -30,7 +30,7 @@ public class GameManagerScript : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
     {
-		//PlayerPrefs.SetString("LevelsProgression", "");
+		PlayerPrefs.SetString("LevelsProgression", "");
 		saving = PlayerPrefs.GetString("LevelsProgression");
 		if (string.IsNullOrEmpty(saving))
         {
@@ -127,7 +127,7 @@ public class GameManagerScript : MonoBehaviour
 			Speed = 0;
 			GameState = GameStateType.Move;
 			CameraProjectionChange.Instance.SetChangeProjection(OrtoPersType.Persp);
-			Rotator.Instance.Invoke("Explosion", 1);
+			Rotator.Instance.Invoke("Explosion", 1.5f);
 			if(CurrentLevel.y < Rotator.Instance.Levels.Count)
 			{
 				Invoke("LevelComplete", 4);

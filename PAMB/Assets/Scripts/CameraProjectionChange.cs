@@ -64,10 +64,21 @@ public class CameraProjectionChange : MonoBehaviour
             if (currentlyOrthographic)
             {
 				MainCamera.projectionMatrix = MatrixLerp(orthoMat, persMat, _currentT / IntroSpeed);
+				Debug.Log(MainCamera.projectionMatrix.determinant);
+				if (MainCamera.projectionMatrix.determinant < -3f)
+                {
+                    _currentT = IntroSpeed;
+                }
             }
             else
             {
 				MainCamera.projectionMatrix = MatrixLerp(persMat, orthoMat, _currentT / IntroSpeed);
+
+				if(MainCamera.projectionMatrix.determinant > -0.005f)
+				{
+					_currentT = IntroSpeed;
+				}
+				Debug.Log(MainCamera.projectionMatrix.determinant);
             }
         }
         else
@@ -144,5 +155,15 @@ public class CameraProjectionChange : MonoBehaviour
 	public void SetCameraAnim(bool v)
 	{
 		Anim.SetBool("UpDown", v);
+	}
+
+	public void SetCameraShakeAnim()
+    {
+		Anim.SetBool("Shake", true);
+    }
+
+    public void SetCamraShake()
+	{
+		Anim.SetBool("Shake", false);
 	}
 }

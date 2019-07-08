@@ -6,6 +6,10 @@ using UnityEngine;
 public class Rotator : MonoBehaviour
 {
 
+	public delegate void Eruption(int v);
+	public Eruption EruptionEvent;
+
+
 	public static Rotator Instance;
 
 	public List<CircleScript> Levels = new List<CircleScript>();
@@ -13,6 +17,7 @@ public class Rotator : MonoBehaviour
 	public CircleScript CurrentCircle;
 	[Range(3,1000)]
 	public float ExplosionForce;
+    
 
 
 	private void Awake()
@@ -58,7 +63,8 @@ public class Rotator : MonoBehaviour
 		Debug.DrawRay(baseExplosion, Vector3.up * 10, Color.red, 10);
 		GameManagerScript.Instance.LevelCompleted(CurrentLevel);
 		RaycastHit[] hits = Physics.RaycastAll(new Ray(baseExplosion, Vector3.up * 10), 10);
-
+		EruptionEvent(CurrentLevel);
+		CameraProjectionChange.Instance.SetCameraShakeAnim();
 		foreach (RaycastHit item in hits)
 		{
 			if(item.collider.tag != "Button")
@@ -67,11 +73,14 @@ public class Rotator : MonoBehaviour
 				item.collider.gameObject.GetComponent<MeshCollider>().enabled = false;
 				item.collider.gameObject.GetComponent<Rigidbody>().isKinematic = false;
 				item.collider.gameObject.GetComponent<Rigidbody>().useGravity = true;
-				item.collider.gameObject.GetComponent<Rigidbody>().AddForceAtPosition((item.collider.transform.position - baseExplosion) * ExplosionForce, item.point, ForceMode.Impulse);
+				//item.collider.gameObject.GetComponent<Rigidbody>().AddForceAtPosition((item.collider.transform.position - baseExplosion) * ExplosionForce, item.point, ForceMode.Impulse);
 
 			}
 		}
+
 	}
+
+   
 
 
     public void GoToNextLevel()
