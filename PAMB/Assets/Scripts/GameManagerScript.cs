@@ -22,11 +22,12 @@ public class GameManagerScript : MonoBehaviour
 	public List<ParticleSystem> Touches = new List<ParticleSystem>();
 
 	string saving = "";
-
+	public int BaseSpeed;
 	private void Awake()
 	{
 		Instance = this;
 		CurrentLevel = Vector2Int.zero;
+		BaseSpeed = Speed;
 	}
 
 	// Start is called before the first frame update
@@ -128,7 +129,6 @@ public class GameManagerScript : MonoBehaviour
 		{
 			CurrentLevel.y += 1;
 			Exploded = true;
-			Speed = 0;
 			GameState = GameStateType.Move;
 			CameraProjectionChange.Instance.SetChangeProjection(OrtoPersType.Persp);
 			CameraProjectionChange.Instance.SetCameraShakeAnim();
@@ -164,7 +164,7 @@ public class GameManagerScript : MonoBehaviour
 		CameraProjectionChange.Instance.Anim.enabled = false;
         CameraProjectionChange.Instance.MoveToNext(VulcanoSideMovement);
         Exploded = false;
-        Speed = 1;
+		Speed = BaseSpeed;
     }
 
     public void GoToNextLevel()
@@ -179,7 +179,7 @@ public class GameManagerScript : MonoBehaviour
 				CameraProjectionChange.Instance.SetChangeProjection(OrtoPersType.Persp);
 				Invoke("MoveN", 0.01f);
 				Exploded = false;
-				Speed = 1;
+				Speed = BaseSpeed;
 			}
 			else
 			{
@@ -204,7 +204,7 @@ public class GameManagerScript : MonoBehaviour
             CameraProjectionChange.Instance.SetChangeProjection(OrtoPersType.Persp);
             Invoke("MoveP", 0.01f);
             Exploded = false;
-            Speed = 1;
+			Speed = BaseSpeed;
 		}
     }
 

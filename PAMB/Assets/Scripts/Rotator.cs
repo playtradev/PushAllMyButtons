@@ -63,6 +63,7 @@ public class Rotator : MonoBehaviour
 		Debug.DrawRay(baseExplosion, Vector3.up * 10, Color.red, 10);
 		GameManagerScript.Instance.LevelCompleted(CurrentLevel);
 		UIManagerScript.Instance.SetStageCompletetdAnim(true);
+		UIManagerScript.Instance.SetTextShakerAnim(true);
 		RaycastHit[] hits = Physics.RaycastAll(new Ray(baseExplosion, Vector3.up * 10), 10);
 		EruptionEvent(CurrentLevel);
 		foreach (RaycastHit item in hits)
@@ -77,11 +78,7 @@ public class Rotator : MonoBehaviour
 
 			}
 		}
-
 	}
-
-   
-
 
     public void GoToNextLevel()
 	{
@@ -123,5 +120,9 @@ public class Rotator : MonoBehaviour
 	}
 
 
+    public void ResetRotation()
+	{
+		transform.eulerAngles = new Vector3(90,100,0);
+	}
 
 }

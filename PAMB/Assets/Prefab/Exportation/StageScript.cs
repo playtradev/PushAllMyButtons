@@ -6,9 +6,6 @@ using TMPro;
 
 public class StageScript : MonoBehaviour {
 
-
-
-
 	public LevelStageClass CurrentLevelStageClass;
 	public Camera MainCam;
 	public List<UILevelScript> Levels = new List<UILevelScript>();

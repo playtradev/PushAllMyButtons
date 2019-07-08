@@ -138,6 +138,9 @@ public class CameraProjectionChange : MonoBehaviour
 				UIManagerScript.Instance.SetStageCompletetdAnim(false);
                 UIManagerScript.Instance.SetTextShakerAnim(false);
                 EnvironmentManagerScript.Instance.MoveToNext(x);
+				Rotator.Instance.ResetRotation();
+				GameManagerScript.Instance.Speed = GameManagerScript.Instance.BaseSpeed;;
+
 			}
 			transform.parent.transform.position = Vector3.Lerp(OffsetPos, dest, Timer);
 			yield return new WaitForFixedUpdate();

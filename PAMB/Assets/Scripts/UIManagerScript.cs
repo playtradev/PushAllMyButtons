@@ -11,6 +11,8 @@ public class UIManagerScript : MonoBehaviour
 	public Animator StartPanel;
 	public Animator StageCompletedAnim;
 	public Image LevelComplete;
+	public LevelBarScript LBS;
+
 	private bool StartPanelBool = true;
 
 	private void Awake()
@@ -48,5 +50,10 @@ public class UIManagerScript : MonoBehaviour
 	{
 		StageCompletedAnim.SetBool("InOut", v);
 	}
+
+	public void SetTextShakerAnim(bool v)
+    {
+        StageCompletedAnim.SetBool("Text Shaker", v);
+    }
 
 }

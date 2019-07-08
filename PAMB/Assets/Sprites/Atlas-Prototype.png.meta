@@ -26,6 +26,9 @@ TextureImporter:
   - first:
       213: 7912812676376978546
     second: Atlas-Prototype_barTop
+  - first:
+      213: 314976853930303607
+    second: Atlas-Prototype_6
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -275,7 +278,7 @@ TextureImporter:
         width: 114
         height: 1074
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -296,7 +299,7 @@ TextureImporter:
         width: 74
         height: 1009
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -304,6 +307,27 @@ TextureImporter:
       bones: []
       spriteID: c55f4a8a756a3c54db4e1a63cd2c68fd
       internalID: 7912812676376978546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas-Prototype_6
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 56
+        width: 75
+        height: 1011
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52a63eb1402e145609be8b246be1518d
+      internalID: 314976853930303607
       vertices: []
       indices: 
       edges: []
