@@ -20,6 +20,12 @@ TextureImporter:
   - first:
       213: 43841109698537209
     second: Atlas-Prototype_5
+  - first:
+      213: -1169752653020081147
+    second: Atlas-Prototype_bar
+  - first:
+      213: 7912812676376978546
+    second: Atlas-Prototype_barTop
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -248,7 +254,7 @@ TextureImporter:
         width: 720
         height: 720
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -256,6 +262,48 @@ TextureImporter:
       bones: []
       spriteID: 0a5bdad0fc095414bac58d9098ff6069
       internalID: 43841109698537209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas-Prototype_bar
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 15
+        width: 114
+        height: 1074
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d62f3dab6f4de149b4886ae885e9a05
+      internalID: -1169752653020081147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atlas-Prototype_barTop
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 59
+        width: 74
+        height: 1009
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c55f4a8a756a3c54db4e1a63cd2c68fd
+      internalID: 7912812676376978546
       vertices: []
       indices: 
       edges: []
