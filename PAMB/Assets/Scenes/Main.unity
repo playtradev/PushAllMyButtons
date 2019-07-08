@@ -195,7 +195,7 @@ PrefabInstance:
     - target: {fileID: 6356529689716611795, guid: 55a1f376cc6154b8bb13c78fc182eaf8,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6356529689716611795, guid: 55a1f376cc6154b8bb13c78fc182eaf8,
         type: 3}
@@ -289,7 +289,7 @@ PrefabInstance:
     - target: {fileID: 6356529689716611795, guid: 55a1f376cc6154b8bb13c78fc182eaf8,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6356529689716611795, guid: 55a1f376cc6154b8bb13c78fc182eaf8,
         type: 3}
@@ -325,7 +325,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &61906687
 Transform:
   m_ObjectHideFlags: 0
@@ -5320,6 +5320,7 @@ MonoBehaviour:
   RB: {fileID: 0}
   Difficulty: 0
   OwnAnimator: {fileID: 0}
+  Anim: {fileID: 0}
   Buttons: []
 --- !u!1 &238716501
 GameObject:
@@ -5424,6 +5425,7 @@ MonoBehaviour:
   RB: {fileID: 0}
   Difficulty: 2
   OwnAnimator: {fileID: 9100000, guid: eb367ca8750e54f798d3ccec813de6b5, type: 2}
+  Anim: {fileID: 242100347}
   Buttons:
   - {fileID: 1933201375}
 --- !u!64 &242100343
@@ -5456,6 +5458,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!95 &242100347
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 242100340}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9b47fa01cdc954a9aa8b661120301a4f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &247351305 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 958b78a40ae5b400c9d62719450a1ef5,
@@ -5511,6 +5532,7 @@ MonoBehaviour:
   RB: {fileID: 0}
   Difficulty: 0
   OwnAnimator: {fileID: 0}
+  Anim: {fileID: 247891794}
   Buttons:
   - {fileID: 1933201375}
 --- !u!64 &247891790
@@ -5543,6 +5565,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!95 &247891794
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247891787}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9b47fa01cdc954a9aa8b661120301a4f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &251218861
 GameObject:
   m_ObjectHideFlags: 0
@@ -5596,6 +5637,7 @@ MonoBehaviour:
   RB: {fileID: 0}
   Difficulty: 0
   OwnAnimator: {fileID: 0}
+  Anim: {fileID: 0}
   Buttons: []
 --- !u!64 &251218864
 MeshCollider:
@@ -5925,6 +5967,7 @@ MonoBehaviour:
   RB: {fileID: 0}
   Difficulty: 0
   OwnAnimator: {fileID: 9100000, guid: 4f3dfa229d3644fb08ed33d55e65ce6b, type: 2}
+  Anim: {fileID: 0}
   Buttons:
   - {fileID: 26209828}
   - {fileID: 303010591}
@@ -5979,7 +6022,7 @@ PrefabInstance:
     - target: {fileID: 6356529689716611795, guid: 55a1f376cc6154b8bb13c78fc182eaf8,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6356529689716611795, guid: 55a1f376cc6154b8bb13c78fc182eaf8,
         type: 3}
@@ -6112,8 +6155,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: -173482714909070930, guid: f1d9a44f4a5354a1f935e222f995f7a0,
-        type: 3}
+      objectReference: {fileID: 2100000, guid: 72efa41e11b0d41b3a06bca81ff1043a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9e74d0757b904ac4bf172107cea577b, type: 3}
 --- !u!1 &492769789
@@ -6176,6 +6218,14 @@ MonoBehaviour:
   MainCamAnim: {fileID: 0}
   VulcanoSideMovement: 40
   levels: []
+  Touches:
+  - {fileID: 747473194}
+  - {fileID: 1640759833}
+  - {fileID: 990378047}
+  - {fileID: 1026333138}
+  - {fileID: 648381181}
+  - {fileID: 2042394065}
+  - {fileID: 61906689}
 --- !u!1 &504535564
 GameObject:
   m_ObjectHideFlags: 0
@@ -6229,6 +6279,7 @@ MonoBehaviour:
   RB: {fileID: 0}
   Difficulty: 0
   OwnAnimator: {fileID: 0}
+  Anim: {fileID: 0}
   Buttons: []
 --- !u!64 &504535567
 MeshCollider:
@@ -6552,7 +6603,7 @@ PrefabInstance:
     - target: {fileID: 6356529689716611795, guid: 55a1f376cc6154b8bb13c78fc182eaf8,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6356529689716611795, guid: 55a1f376cc6154b8bb13c78fc182eaf8,
         type: 3}
@@ -6667,8 +6718,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: -173482714909070930, guid: f1d9a44f4a5354a1f935e222f995f7a0,
-        type: 3}
+      objectReference: {fileID: 2100000, guid: 72efa41e11b0d41b3a06bca81ff1043a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9e74d0757b904ac4bf172107cea577b, type: 3}
 --- !u!1 &648381178
@@ -6688,7 +6738,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &648381179
 Transform:
   m_ObjectHideFlags: 0
@@ -11714,6 +11764,7 @@ MonoBehaviour:
   RB: {fileID: 0}
   Difficulty: 0
   OwnAnimator: {fileID: 0}
+  Anim: {fileID: 0}
   Buttons: []
 --- !u!64 &702660248
 MeshCollider:
@@ -11856,6 +11907,7 @@ MonoBehaviour:
   RB: {fileID: 0}
   Difficulty: 0
   OwnAnimator: {fileID: 0}
+  Anim: {fileID: 0}
   Buttons: []
 --- !u!1 &747313491 stripped
 GameObject:
@@ -11917,6 +11969,7 @@ MonoBehaviour:
   RB: {fileID: 0}
   Difficulty: 0
   OwnAnimator: {fileID: 0}
+  Anim: {fileID: 0}
   Buttons: []
 --- !u!1 &747473191
 GameObject:
@@ -11935,7 +11988,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &747473192
 Transform:
   m_ObjectHideFlags: 0
@@ -11944,7 +11997,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 747473191}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.029999971, y: 15.349356, z: 6.23}
+  m_LocalPosition: {x: -0.029999971, y: 24.86, z: 6.23}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 492769790}
@@ -16856,6 +16909,7 @@ MonoBehaviour:
   RB: {fileID: 0}
   Difficulty: 0
   OwnAnimator: {fileID: 0}
+  Anim: {fileID: 0}
   Buttons: []
 --- !u!64 &867711282
 MeshCollider:
@@ -17170,7 +17224,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &990378045
 Transform:
   m_ObjectHideFlags: 0
@@ -22101,8 +22155,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: -173482714909070930, guid: f1d9a44f4a5354a1f935e222f995f7a0,
-        type: 3}
+      objectReference: {fileID: 2100000, guid: 72efa41e11b0d41b3a06bca81ff1043a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5443f680a65704c13b589cdc59a0cd75, type: 3}
 --- !u!1 &1026333135
@@ -22122,7 +22175,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1026333136
 Transform:
   m_ObjectHideFlags: 0
@@ -27041,6 +27094,7 @@ MonoBehaviour:
   RB: {fileID: 0}
   Difficulty: 0
   OwnAnimator: {fileID: 0}
+  Anim: {fileID: 0}
   Buttons: []
 --- !u!64 &1115086896
 MeshCollider:
@@ -27240,8 +27294,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: -173482714909070930, guid: f1d9a44f4a5354a1f935e222f995f7a0,
-        type: 3}
+      objectReference: {fileID: 2100000, guid: 72efa41e11b0d41b3a06bca81ff1043a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5443f680a65704c13b589cdc59a0cd75, type: 3}
 --- !u!1 &1157895589
@@ -27297,6 +27350,7 @@ MonoBehaviour:
   RB: {fileID: 0}
   Difficulty: 0
   OwnAnimator: {fileID: 0}
+  Anim: {fileID: 0}
   Buttons: []
 --- !u!64 &1157895592
 MeshCollider:
@@ -27403,6 +27457,7 @@ MonoBehaviour:
   RB: {fileID: 0}
   Difficulty: 1
   OwnAnimator: {fileID: 0}
+  Anim: {fileID: 1165781238}
   Buttons:
   - {fileID: 566723780}
 --- !u!64 &1165781234
@@ -27435,6 +27490,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!95 &1165781238
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1165781231}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9b47fa01cdc954a9aa8b661120301a4f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1182570382
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27531,8 +27605,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: -173482714909070930, guid: f1d9a44f4a5354a1f935e222f995f7a0,
-        type: 3}
+      objectReference: {fileID: 2100000, guid: 72efa41e11b0d41b3a06bca81ff1043a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9e74d0757b904ac4bf172107cea577b, type: 3}
 --- !u!1 &1221182107 stripped
@@ -27615,6 +27688,7 @@ MonoBehaviour:
   RB: {fileID: 0}
   Difficulty: 0
   OwnAnimator: {fileID: 0}
+  Anim: {fileID: 0}
   Buttons: []
 --- !u!64 &1250127757
 MeshCollider:
@@ -27721,6 +27795,7 @@ MonoBehaviour:
   RB: {fileID: 0}
   Difficulty: 1
   OwnAnimator: {fileID: 0}
+  Anim: {fileID: 1263273783}
   Buttons:
   - {fileID: 1933201375}
 --- !u!64 &1263273779
@@ -27753,6 +27828,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!95 &1263273783
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1263273776}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9b47fa01cdc954a9aa8b661120301a4f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!198 &1272719700 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 1991958094541050036, guid: 55a1f376cc6154b8bb13c78fc182eaf8,
@@ -33031,8 +33125,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: -173482714909070930, guid: f1d9a44f4a5354a1f935e222f995f7a0,
-        type: 3}
+      objectReference: {fileID: 2100000, guid: 72efa41e11b0d41b3a06bca81ff1043a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5443f680a65704c13b589cdc59a0cd75, type: 3}
 --- !u!1001 &1396820128
@@ -33185,7 +33278,7 @@ PrefabInstance:
     - target: {fileID: 6356529689716611795, guid: 55a1f376cc6154b8bb13c78fc182eaf8,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6356529689716611795, guid: 55a1f376cc6154b8bb13c78fc182eaf8,
         type: 3}
@@ -33440,7 +33533,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1640759831
 Transform:
   m_ObjectHideFlags: 0
@@ -38411,6 +38504,7 @@ MonoBehaviour:
   RB: {fileID: 0}
   Difficulty: 2
   OwnAnimator: {fileID: 9100000, guid: 27b6cdf784d4a4724a709953e2c9eb88, type: 2}
+  Anim: {fileID: 1677020059}
   Buttons:
   - {fileID: 566723780}
 --- !u!64 &1677020055
@@ -38443,6 +38537,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!95 &1677020059
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1677020052}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9b47fa01cdc954a9aa8b661120301a4f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!198 &1678276537 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 6069213682048552501, guid: 55a1f376cc6154b8bb13c78fc182eaf8,
@@ -38866,6 +38979,7 @@ MonoBehaviour:
   RB: {fileID: 0}
   Difficulty: 0
   OwnAnimator: {fileID: 0}
+  Anim: {fileID: 1886833686}
   Buttons:
   - {fileID: 566723780}
 --- !u!64 &1886833682
@@ -38898,6 +39012,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!95 &1886833686
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1886833679}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9b47fa01cdc954a9aa8b661120301a4f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1888120423
 GameObject:
   m_ObjectHideFlags: 0
@@ -38951,6 +39084,7 @@ MonoBehaviour:
   RB: {fileID: 0}
   Difficulty: 0
   OwnAnimator: {fileID: 0}
+  Anim: {fileID: 0}
   Buttons: []
 --- !u!64 &1888120426
 MeshCollider:
@@ -39136,7 +39270,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2042394063
 Transform:
   m_ObjectHideFlags: 0
@@ -44024,6 +44158,7 @@ MonoBehaviour:
   RB: {fileID: 0}
   Difficulty: 0
   OwnAnimator: {fileID: 0}
+  Anim: {fileID: 0}
   Buttons: []
 --- !u!64 &2050254641
 MeshCollider:
@@ -44156,7 +44291,7 @@ PrefabInstance:
     - target: {fileID: 6356529689716611795, guid: 55a1f376cc6154b8bb13c78fc182eaf8,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6356529689716611795, guid: 55a1f376cc6154b8bb13c78fc182eaf8,
         type: 3}

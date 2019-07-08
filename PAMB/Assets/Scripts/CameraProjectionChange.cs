@@ -64,7 +64,7 @@ public class CameraProjectionChange : MonoBehaviour
             if (currentlyOrthographic)
             {
 				MainCamera.projectionMatrix = MatrixLerp(orthoMat, persMat, _currentT / IntroSpeed);
-				Debug.Log(MainCamera.projectionMatrix.determinant);
+				//Debug.Log(MainCamera.projectionMatrix.determinant);
 				if (MainCamera.projectionMatrix.determinant < -3f)
                 {
                     _currentT = IntroSpeed;
@@ -78,7 +78,7 @@ public class CameraProjectionChange : MonoBehaviour
 				{
 					_currentT = IntroSpeed;
 				}
-				Debug.Log(MainCamera.projectionMatrix.determinant);
+				//Debug.Log(MainCamera.projectionMatrix.determinant);
             }
         }
         else

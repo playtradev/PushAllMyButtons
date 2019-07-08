@@ -19,6 +19,8 @@ public class GameManagerScript : MonoBehaviour
 	public float VulcanoSideMovement = 40;
 	public List<string> levels = new List<string>();
 
+	public List<ParticleSystem> Touches = new List<ParticleSystem>();
+
 	string saving = "";
 
 	private void Awake()
@@ -107,10 +109,12 @@ public class GameManagerScript : MonoBehaviour
 				if (button > 0 && disk == 0)
                 {
                     Speed++;
+					StartCoroutine(TouchParticle(hit.Where(r => r.collider.tag == "Button").ToList().First().point));
                 }
 				else
 				{
 					Speed--;
+					Rotator.Instance.CurrentCircle.Wobbling();
 				}
 				if(Speed<1)
 				{
@@ -127,7 +131,8 @@ public class GameManagerScript : MonoBehaviour
 			Speed = 0;
 			GameState = GameStateType.Move;
 			CameraProjectionChange.Instance.SetChangeProjection(OrtoPersType.Persp);
-			Rotator.Instance.Invoke("Explosion", 1.5f);
+			CameraProjectionChange.Instance.SetCameraShakeAnim();
+			Rotator.Instance.Invoke("Explosion", 2.1f);
 			if(CurrentLevel.y < Rotator.Instance.Levels.Count)
 			{
 				Invoke("LevelComplete", 4);
@@ -140,6 +145,18 @@ public class GameManagerScript : MonoBehaviour
 		}
 
     }
+
+	private IEnumerator TouchParticle(Vector3 v3)
+	{
+		ParticleSystem ps = Touches.Where(r => !r.gameObject.activeInHierarchy).FirstOrDefault();
+		if(ps != null)
+		{
+			ps.gameObject.SetActive(true);
+			ps.transform.position = v3;
+			yield return new WaitForSecondsRealtime(1.1f);
+			ps.gameObject.SetActive(false);
+		}
+	}
 
 
 	public void LevelComplete()
@@ -160,7 +177,7 @@ public class GameManagerScript : MonoBehaviour
 				GameState = GameStateType.Move;
 				CameraProjectionChange.Instance.SetCameraAnim(true);
 				CameraProjectionChange.Instance.SetChangeProjection(OrtoPersType.Persp);
-				Invoke("MoveN", 1);
+				Invoke("MoveN", 0.01f);
 				Exploded = false;
 				Speed = 1;
 			}
@@ -185,7 +202,7 @@ public class GameManagerScript : MonoBehaviour
 			GameState = GameStateType.Move;
             CameraProjectionChange.Instance.SetCameraAnim(true);
             CameraProjectionChange.Instance.SetChangeProjection(OrtoPersType.Persp);
-            Invoke("MoveP", 1);
+            Invoke("MoveP", 0.01f);
             Exploded = false;
             Speed = 1;
 		}

@@ -11,6 +11,8 @@ public class CircleScript : MonoBehaviour
 	public DifficultyType Difficulty;
 	public RuntimeAnimatorController OwnAnimator;
 
+	public Animator Anim;
+
 	public List<Transform> Buttons = new List<Transform>();
 
 	private void Awake()
@@ -36,4 +38,15 @@ public class CircleScript : MonoBehaviour
             
 		}*/
     }
+
+    public void Wobbling()
+	{
+		Anim.SetBool("Wobble", true);
+	}
+
+    public void StopWobbling()
+	{
+		Anim.SetBool("Wobble", false);
+	}
+
 }

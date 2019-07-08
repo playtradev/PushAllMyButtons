@@ -64,7 +64,6 @@ public class Rotator : MonoBehaviour
 		GameManagerScript.Instance.LevelCompleted(CurrentLevel);
 		RaycastHit[] hits = Physics.RaycastAll(new Ray(baseExplosion, Vector3.up * 10), 10);
 		EruptionEvent(CurrentLevel);
-		CameraProjectionChange.Instance.SetCameraShakeAnim();
 		foreach (RaycastHit item in hits)
 		{
 			if(item.collider.tag != "Button")
