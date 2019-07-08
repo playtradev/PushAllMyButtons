@@ -56,14 +56,14 @@ Material:
     - _FoamScale: 20
     - _FoamSpeed: 0.3
     - _FoamSpread: 1
-    - _FresPower: 1.5
+    - _FresPower: 1.177
     - _HQFoam: 0
     - _Height: 0.4
     - _Height_: 0.4
     - _Length: 4
     - _LightAbs: 0
     - _NormalOffset: 1
-    - _Opacity: 0.4
+    - _Opacity: 0.663
     - _PointLights: 0
     - _RHeight: 0.2
     - _RHeight_: 0.2
@@ -91,8 +91,8 @@ Material:
     - _Color: {r: 0, g: 0.6006591, b: 0.75735295, a: 1}
     - _DeepColor: {r: 0, g: 0.20955881, b: 0.41911763, a: 1}
     - _Direction_: {r: -1, g: -0.00000008742278, b: -0.6, a: -0.000000052453668}
-    - _FresColor: {r: 0.36689016, g: 0.52222586, b: 0.5735294, a: 1}
+    - _FresColor: {r: 0.36862746, g: 0.38384035, b: 0.57254905, a: 1}
     - _ShoreColor: {r: 1, g: 1, b: 1, a: 1}
     - _SpecColor: {r: 0.6764706, g: 0.6359274, b: 0.2785467, a: 1}
-    - _Sun: {r: -0, g: 0.9396926, b: -0.34202027, a: 0}
+    - _Sun: {r: -0, g: 0.76604456, b: -0.6427876, a: 0}
     - _SunColor: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
