@@ -132,7 +132,7 @@ public class GameManagerScript : MonoBehaviour
 			GameState = GameStateType.Move;
 			CameraProjectionChange.Instance.SetChangeProjection(OrtoPersType.Persp);
 			CameraProjectionChange.Instance.SetCameraShakeAnim();
-			Rotator.Instance.Invoke("Explosion", 2.1f);
+			Rotator.Instance.Invoke("Explosion", 1.25f);
 			if(CurrentLevel.y < Rotator.Instance.Levels.Count)
 			{
 				Invoke("LevelComplete", 4);

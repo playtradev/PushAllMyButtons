@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.86128706, g: 0.77785164, b: 0.6550913, a: 1}
+  m_IndirectSpecularColor: {r: 0.86015725, g: 0.78043807, b: 0.6594266, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6212,7 +6212,7 @@ MonoBehaviour:
   GameState: 0
   CurrentLevel: {x: 0, y: 0}
   Points: {fileID: 1668038061}
-  PointsToFinishLevel: 20
+  PointsToFinishLevel: 10
   Speed: 1
   Exploded: 0
   MainCamAnim: {fileID: 0}
@@ -17202,11 +17202,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67fc39602c09d4bb8896a2b812025e8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ProjectionChangeTime: 5
+  ProjectionChangeTime: 1
   ChangeProjection: 0
   Anim: {fileID: 963194229}
   MainCamera: {fileID: 963194227}
-  IntroSpeed: 2
+  IntroSpeed: 0.5
 --- !u!1 &990378044
 GameObject:
   m_ObjectHideFlags: 0

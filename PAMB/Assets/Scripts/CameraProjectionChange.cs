@@ -65,7 +65,7 @@ public class CameraProjectionChange : MonoBehaviour
             {
 				MainCamera.projectionMatrix = MatrixLerp(orthoMat, persMat, _currentT / IntroSpeed);
 				//Debug.Log(MainCamera.projectionMatrix.determinant);
-				if (MainCamera.projectionMatrix.determinant < -3f)
+				if (MainCamera.projectionMatrix.determinant < -1f)
                 {
                     _currentT = IntroSpeed;
                 }
@@ -131,7 +131,7 @@ public class CameraProjectionChange : MonoBehaviour
 		bool MoveEnvironment = false;
 		while(Timer < 1)
 		{
-			if(Timer > 0.5f && !MoveEnvironment)
+			if(Timer > 0.005f && !MoveEnvironment)
 			{
 				MoveEnvironment = true;
 				Rotator.Instance.GoToNextLevel();
@@ -140,9 +140,10 @@ public class CameraProjectionChange : MonoBehaviour
 			}
 			transform.parent.transform.position = Vector3.Lerp(OffsetPos, dest, Timer);
 			yield return new WaitForFixedUpdate();
-			Timer += Time.fixedDeltaTime;
+			Timer += Time.fixedDeltaTime * 2f;
 		}
-		Anim.enabled = true;
+        transform.parent.transform.position = dest;
+        Anim.enabled = true;
 		SetCameraAnim(false);
 		MoveCamCo = null;                                       
 	}
