@@ -62,6 +62,7 @@ public class Rotator : MonoBehaviour
 		Vector3 baseExplosion = Vector3.down + new Vector3(1f, 0, 1f);//  + new Vector3(1f,0,1f)      Random.Range(-2.5f, 2.5f), 0, Random.Range(-2.5f, 2.5f)
 		Debug.DrawRay(baseExplosion, Vector3.up * 10, Color.red, 10);
 		GameManagerScript.Instance.LevelCompleted(CurrentLevel);
+		UIManagerScript.Instance.SetStageCompletetdAnim(true);
 		RaycastHit[] hits = Physics.RaycastAll(new Ray(baseExplosion, Vector3.up * 10), 10);
 		EruptionEvent(CurrentLevel);
 		foreach (RaycastHit item in hits)

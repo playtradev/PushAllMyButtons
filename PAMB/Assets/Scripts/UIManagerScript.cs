@@ -9,6 +9,7 @@ public class UIManagerScript : MonoBehaviour
 	public static UIManagerScript Instance;
 	public Animator WinPanel;
 	public Animator StartPanel;
+	public Animator StageCompletedAnim;
 	public Image LevelComplete;
 	private bool StartPanelBool = true;
 
@@ -41,4 +42,11 @@ public class UIManagerScript : MonoBehaviour
 		StartPanel.SetBool("Visible", StartPanelBool);
 		CameraProjectionChange.Instance.SetChangeProjection(OrtoPersType.Orto);
 	}
+
+
+    public void SetStageCompletetdAnim(bool v)
+	{
+		StageCompletedAnim.SetBool("InOut", v);
+	}
+
 }

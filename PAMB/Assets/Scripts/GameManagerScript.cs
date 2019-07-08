@@ -111,7 +111,7 @@ public class GameManagerScript : MonoBehaviour
                     Speed++;
 					StartCoroutine(TouchParticle(hit.Where(r => r.collider.tag == "Button").ToList().First().point));
                 }
-				else
+				else if(disk != 0)
 				{
 					Speed--;
 					Rotator.Instance.CurrentCircle.Wobbling();
@@ -139,7 +139,7 @@ public class GameManagerScript : MonoBehaviour
 			}
 			else
 			{
-				GameManagerScript.Instance.GameState = GameStateType.End;
+				GameState = GameStateType.End;
                 UIManagerScript.Instance.SetWinPanelAnim(true);
 			}
 		}
