@@ -27,17 +27,22 @@ MonoBehaviour:
   CustomArea: 
   gameKey:
   - 6b74e13e8f16fc29d6553db71c7a8b0e
+  - 6426f42f6f6842f4465105157c8e549b
   secretKey:
   - aee7ca66259b3d2605a3de4f911ca19bc0049297
+  - 88fafca4f50c2228388431360af3fd0885e75232
   Build:
+  - 0.1
   - 0.1
   SelectedPlatformStudio:
   - Playtra
+  - Playtra
   SelectedPlatformGame:
   - Push All My Buttons - iOS
-  SelectedPlatformGameID: 102e0100
-  SelectedStudio: 02000000
-  SelectedGame: 01000000
+  - Push All My Buttons - Android
+  SelectedPlatformGameID: 102e0100202e0100
+  SelectedStudio: 0200000002000000
+  SelectedGame: 0100000001000000
   NewVersion: 
   Changes: 
   SignUpOpen: 0
@@ -57,7 +62,7 @@ MonoBehaviour:
   ResourceItemTypes: []
   ResourceCurrencies: []
   LastCreatedGamePlatform: 0
-  Platforms: 08000000
+  Platforms: 080000000b000000
   CurrentInspectorState: 1
   ClosedHints: 
   DisplayHints: 0
@@ -84,7 +89,7 @@ MonoBehaviour:
   IncludeGooglePlay: 1
   FpsCriticalThreshold: 20
   FpsCirticalSubmitInterval: 1
-  PlatformFoldOut: 01
+  PlatformFoldOut: 0101
   CustomDimensions01FoldOut: 0
   CustomDimensions02FoldOut: 0
   CustomDimensions03FoldOut: 0

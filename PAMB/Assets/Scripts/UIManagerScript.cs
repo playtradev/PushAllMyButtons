@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class UIManagerScript : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class UIManagerScript : MonoBehaviour
 	public Animator StageCompletedAnim;
 	public Image LevelComplete;
 	public LevelBarScript LBS;
+	public TextMeshProUGUI FPS;
 
 	private bool StartPanelBool = true;
 
@@ -29,12 +31,17 @@ public class UIManagerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+		FPS.text = (1.0f / Time.deltaTime).ToString();
     }
 
 	public void SetWinPanelAnim(bool v)
 	{
 		WinPanel.SetBool("InOut", v);
+
+        if(!v)
+		{
+			Rotator.Instance.StartLevel(false);
+		}
 	}
 
     public void StartLevel()

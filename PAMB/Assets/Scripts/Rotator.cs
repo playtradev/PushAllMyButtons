@@ -11,7 +11,7 @@ public class Rotator : MonoBehaviour
 
 
 	public static Rotator Instance;
-
+	public Transform Water;
 	public List<CircleScript> Levels = new List<CircleScript>();
 	public int CurrentLevel = 0;
 	public CircleScript CurrentCircle;
@@ -33,7 +33,7 @@ public class Rotator : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
 		if(!GameManagerScript.Instance.Exploded)
 		{
@@ -41,11 +41,23 @@ public class Rotator : MonoBehaviour
 		}
     }
 
-    public void StartLevel()
+	public void StartLevel(bool v = true)
 	{
 		Levels = Levels.OrderBy(r => r.Position).ToList();
 		CurrentLevel = GameManagerScript.Instance.CurrentLevel.y;
-		transform.position += new Vector3(CurrentLevel * 40, 0, 0);
+        if(v)
+		{
+			transform.position += new Vector3(CurrentLevel * 40, 0, 0);
+		}
+		else
+		{
+			GameManagerScript.Instance.GameState = GameStateType.Move;
+            CameraProjectionChange.Instance.SetCameraAnim(true);
+            CameraProjectionChange.Instance.SetChangeProjection(OrtoPersType.Persp);
+			CameraProjectionChange.Instance.MoveToNext(0);
+			GameManagerScript.Instance.Exploded = false;
+			GameManagerScript.Instance.Speed = GameManagerScript.Instance.BaseSpeed;
+		}
 		CurrentCircle = Levels[CurrentLevel];
         CurrentCircle.gameObject.SetActive(true);
         foreach (Transform item in CurrentCircle.Buttons)

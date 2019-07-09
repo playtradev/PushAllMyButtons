@@ -18,7 +18,7 @@ public class GameManagerScript : MonoBehaviour
 	public Animator MainCamAnim;
 	public float VulcanoSideMovement = 40;
 	public List<string> levels = new List<string>();
-
+	private float OffsetFixedUpdateTimer = 0;
 	public List<ParticleSystem> Touches = new List<ParticleSystem>();
 
 	string saving = "";
@@ -33,7 +33,8 @@ public class GameManagerScript : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
     {
-		PlayerPrefs.SetString("LevelsProgression", "");
+		//Application.targetFrameRate = 2;
+		//PlayerPrefs.SetString("LevelsProgression", "");
 		saving = PlayerPrefs.GetString("LevelsProgression");
 		if (string.IsNullOrEmpty(saving))
         {
@@ -80,6 +81,17 @@ public class GameManagerScript : MonoBehaviour
 		CameraProjectionChange.Instance.SetCameraAnim(false);
 	}
 
+    public void Feedback()
+	{
+		Application.OpenURL("https://www.docs.google.com/forms/d/e/1FAIpQLScNr-hMFEzglp7uk9XRvAR6xPijnFNvJrk5m2laU0hg0HhUrg/viewform?usp=sf_link");
+	}
+
+	public void MoreGames()
+    {
+		Debug.Log("inside");
+		Application.OpenURL("https://www.playtra.com/");
+    }
+
 
     public void SetGameStateToStart()
 	{
@@ -87,15 +99,23 @@ public class GameManagerScript : MonoBehaviour
 	}
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
 		if(Input.GetKey(KeyCode.A))
 		{
 			Speed++;
 		}
 
-		if(Input.GetMouseButtonDown(0) && GameState == GameStateType.Start)
+		if(Input.GetMouseButtonDown(0))
 		{
+			Debug.Log("BTN");
+		}
+
+		if(Input.GetMouseButtonDown(0) && GameState == GameStateType.Start && (Time.time - OffsetFixedUpdateTimer > 0.1f))
+		{
+
+			Debug.Log("yep");
+			OffsetFixedUpdateTimer = Time.time;
 			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             Plane p = new Plane(Vector3.up, Vector3.zero);
             float dist = 0;
@@ -103,7 +123,13 @@ public class GameManagerScript : MonoBehaviour
             Debug.DrawRay(ray.origin, ray.direction * 100, Color.red, 30);
             RaycastHit[] hit;
 			hit = Physics.RaycastAll(ray,100);
-			if(hit.Length > 0)
+
+			foreach (var item in hit)
+			{
+				Debug.Log(item.collider.name);
+			}
+
+			if (hit.Length > 0)
 			{
 				int button = hit.Where(r => r.collider.tag == "Button").ToList().Count();
 				int disk = hit.Where(r => r.collider.tag == "Disk").ToList().Count();
@@ -117,9 +143,9 @@ public class GameManagerScript : MonoBehaviour
 					Speed--;
 					Rotator.Instance.CurrentCircle.Wobbling();
 				}
-				if(Speed<1)
+				if(Speed < BaseSpeed)
 				{
-					Speed = 1;
+					Speed = BaseSpeed;
 				}
 				Points.text = "Points:" + Speed;
 			}
@@ -127,14 +153,14 @@ public class GameManagerScript : MonoBehaviour
 
 		if(Speed == PointsToFinishLevel && !Exploded)
 		{
-			CurrentLevel.y += 1;
 			Exploded = true;
 			GameState = GameStateType.Move;
 			CameraProjectionChange.Instance.SetChangeProjection(OrtoPersType.Persp);
 			CameraProjectionChange.Instance.SetCameraShakeAnim();
 			Rotator.Instance.Invoke("Explosion", 1.25f);
-			if(CurrentLevel.y < Rotator.Instance.Levels.Count)
+			if(CurrentLevel.y < Rotator.Instance.Levels.Count - 1)
 			{
+				CurrentLevel.y += 1;
 				Invoke("LevelComplete", 4);
 			}
 			else

@@ -24,12 +24,11 @@ public class ButtonsRotator : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-		if(IsAnimActive && GameManagerScript.Instance.Difficulty != DifficultyType.hard)
+		if(GameManagerScript.Instance.Difficulty == DifficultyType.easy)
 		{
-			IsAnimActive = false;
-			Anim.enabled = IsAnimActive;
+			
 			transform.eulerAngles = new Vector3(0,-90,0);
 		}
 
@@ -44,6 +43,12 @@ public class ButtonsRotator : MonoBehaviour
 			IsAnimActive = true;
 			Anim.enabled = IsAnimActive;
 			Anim.runtimeAnimatorController = Rotator.Instance.CurrentCircle.OwnAnimator;
+		}
+
+		if(IsAnimActive && GameManagerScript.Instance.Difficulty != DifficultyType.hard)
+		{
+			IsAnimActive = false;
+            Anim.enabled = IsAnimActive;
 		}
     }
 
